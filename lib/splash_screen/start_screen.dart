@@ -9,7 +9,6 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SafeArea(
         child: Stack(
           children: [
@@ -25,7 +24,7 @@ class StartScreen extends StatelessWidget {
               alignment: Alignment.center,
               margin: const EdgeInsets.only(top: 400),
               child: ElevatedButton(
-                onPressed: () => Get.to(() => const MainScreen()),
+                onPressed: () => Get.off(() => const MainScreen()),
                 child: const Text(
                   "Start",
                   style: TextStyle(fontSize: 30, color: Colors.white),

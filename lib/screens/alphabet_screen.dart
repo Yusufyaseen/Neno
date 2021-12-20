@@ -10,7 +10,6 @@ class AlphabetsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SafeArea(
         child: Stack(
           children: [
@@ -30,7 +29,7 @@ class AlphabetsScreen extends StatelessWidget {
                 crossAxisSpacing: 20.0,
                 mainAxisSpacing: 15.0,
                 children: List.generate(
-                  alphas.getAsList().length,
+                  alphas.getAsList().length,// 26
                   (index) {
                     return GestureDetector(
                       onTap: () => Get.to(() => EveryAlphabet(

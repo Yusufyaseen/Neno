@@ -29,11 +29,16 @@ class Alphabets{
     'Y' : ["Yacht","Yellow","Yogurt","Yoyo"],
     'Z' : ["Zebra","Zero","Zigzag","Zoo"],
   };
+  final List<String> _numbers = ["1","1 hand","2","2 hand","3","3 hand","4","4 hand","5","5 hand","6","6 hand","7","7 hand","8","8 hand","9","9 hand","10","10 hand","11","11 hand","12","12 hand","13","13 hand","14","14 hand","15","15 hand","16","16 hand","17","17 hand","18","18 hand","19","19 hand","20","20 hand"] ;
+
   List getAsList() {
     return _all.entries.toList();
   }
   List getWords(String? s) {
     return _all[s];
+  }
+  List getNumber(){
+    return _numbers;
   }
 }
 

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:childs/data/alphabets.dart';
 import 'package:flutter/material.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
@@ -23,6 +21,14 @@ class _EveryAlphabetState extends State<EveryAlphabet> {
 
     assetsAudioPlayer.open(
       Audio("assets/audios/${widget.char}.mp3"),
+      showNotification: true,
+    );
+  }
+  void playingWords(String? alphaWord) {
+    final assetsAudioPlayer = AssetsAudioPlayer();
+
+    assetsAudioPlayer.open(
+      Audio("assets/audios/${alphaWord.toString().toLowerCase()}.mp3"),
       showNotification: true,
     );
   }
@@ -74,12 +80,13 @@ class _EveryAlphabetState extends State<EveryAlphabet> {
                 crossAxisSpacing: 10.0,
                 mainAxisSpacing: 10.0,
                 children: List.generate(
-                  words.length,
+                  words.length, //5
                       (index) {
                     return GestureDetector(
                       onTap: (){
                         setState(() {
                           word=words[index];
+                          playingWords(word);
                         });
                       },
                       child: Container(
