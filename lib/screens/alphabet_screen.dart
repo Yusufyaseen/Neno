@@ -7,6 +7,7 @@ class AlphabetsScreen extends StatelessWidget {
   Alphabets alphas = Alphabets();
 
   AlphabetsScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

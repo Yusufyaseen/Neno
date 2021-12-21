@@ -1,4 +1,5 @@
 import 'package:childs/screens/alphabet_screen.dart';
+import 'package:childs/screens/home_screen.dart';
 import 'package:childs/screens/numbers_screen.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,7 @@ class MainScreen extends StatelessWidget {
                         height: 10,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.to(() =>  HomeScreen()),
                         child: Container(
                           width: MediaQuery.of(context).size.width * 0.75,
                           height: 140,
